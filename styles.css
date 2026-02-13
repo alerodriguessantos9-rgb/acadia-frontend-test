@@ -83,10 +83,12 @@ body {
 
 .media {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: rgba(255,255,255,0.04);
+  padding: 16px;
+  background: #fff;
 }
+
 
 .media img {
   width: 100%;
