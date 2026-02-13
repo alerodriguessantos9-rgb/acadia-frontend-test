@@ -91,9 +91,9 @@ body {
 .media img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* imagem escala sem distorcer */
+  object-fit: contain;
   display: block;
-  transform: scale(1.02);
+  padding: 12px;
 }
 
 .content {
