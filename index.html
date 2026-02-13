@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acadia — Product Grid</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Acadia Store</h1>
+
+      <!-- pequeno feedback do JS -->
+      <div class="cart" aria-live="polite">
+        Cart: <span id="cartCount">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="subtitle">
+      Responsive, mobile-first product cards with DOM interactions.
+    </p>
+
+    <section class="product-grid" aria-label="Product grid">
+      <!-- Card 1 -->
+      <article class="product-card" data-id="p1" data-name="Wireless Headphones" data-price="129.99">
+        <div class="media">
+          <img
+            src="https://picsum.photos/640/420?random=11"
+            alt="Wireless Headphones"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="content">
+          <h2 class="product-title">Wireless Headphones</h2>
+          <p class="product-desc">Noise-cancelling, 30h battery, and crystal-clear calls.</p>
+
+          <div class="meta">
+            <span class="price">$129.99</span>
+            <span class="badge" aria-label="Free shipping">Free shipping</span>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary add-to-cart" type="button">
+              Add to Cart
+            </button>
+
+            <button class="btn btn-ghost toggle-details" type="button" aria-expanded="false">
+              Details
+            </button>
+          </div>
+
+          <div class="details" hidden>
+            <ul>
+              <li>Bluetooth 5.3</li>
+              <li>USB-C fast charging</li>
+              <li>Foldable design</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="product-card" data-id="p2" data-name="Smart Watch" data-price="199.99">
+        <div class="media">
+          <img
+            src="https://picsum.photos/640/420?random=12"
+            alt="Smart Watch"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="content">
+          <h2 class="product-title">Smart Watch</h2>
+          <p class="product-desc">Health tracking, workouts, notifications, and GPS.</p>
+
+          <div class="meta">
+            <span class="price">$199.99</span>
+            <span class="badge" aria-label="New">New</span>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary add-to-cart" type="button">
+              Add to Cart
+            </button>
+
+            <button class="btn btn-ghost toggle-details" type="button" aria-expanded="false">
+              Details
+            </button>
+          </div>
+
+          <div class="details" hidden>
+            <ul>
+              <li>Water resistant</li>
+              <li>Heart-rate monitoring</li>
+              <li>7-day battery</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="product-card" data-id="p3" data-name="Bluetooth Speaker" data-price="89.99">
+        <div class="media">
+          <img
+            src="https://picsum.photos/640/420?random=13"
+            alt="Bluetooth Speaker"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="content">
+          <h2 class="product-title">Bluetooth Speaker</h2>
+          <p class="product-desc">Big sound in a small package, built for travel.</p>
+
+          <div class="meta">
+            <span class="price">$89.99</span>
+            <span class="badge" aria-label="Best seller">Best seller</span>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary add-to-cart" type="button">
+              Add to Cart
+            </button>
+
+            <button class="btn btn-ghost toggle-details" type="button" aria-expanded="false">
+              Details
+            </button>
+          </div>
+
+          <div class="details" hidden>
+            <ul>
+              <li>12h play time</li>
+              <li>Deep bass mode</li>
+              <li>Compact + rugged</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>Built with HTML/CSS/JS — mobile-first responsive layout.</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
