@@ -66,7 +66,6 @@ body {
   line-height: 1.5;
 }
 
-/* MOBILE-FIRST GRID (1 column by default) */
 .product-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -102,7 +101,6 @@ body {
   padding: 16px;
   background: #fff;
 }
-
 
 .media img {
   width: 100%;
@@ -210,7 +208,6 @@ body {
   color: var(--muted);
 }
 
-/* TABLET: 2 columns */
 @media (min-width: 768px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -218,14 +215,12 @@ body {
   }
 }
 
-/* DESKTOP: 3 columns */
 @media (min-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 }
-
 
 .product-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -237,8 +232,6 @@ body {
   transform: translateY(-2px);
 }
 
-
-/* PART 2 — Search UI */
 .search-wrapper {
   max-width: 420px;
   margin: 0 auto 24px;
@@ -264,7 +257,6 @@ body {
   box-shadow: 0 0 0 4px rgba(255,255,255,0.08);
 }
 
-/* PART 2 — Added state */
 .product-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
