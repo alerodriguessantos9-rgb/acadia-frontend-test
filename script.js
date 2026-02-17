@@ -117,7 +117,7 @@ const sampleProduct = {
   price: 149.99,
   badge: "Sample",
   image: "images/keyboard.png",
-  features: ["Hot-swappable", "USB-C", "Compact 75%"]
+  features: ["Hot-swappable", "USB-C", "Compact 60%"]
 };
 
 
