@@ -10,15 +10,18 @@
 }
 
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html, body {
+  min-height: 100%;
+}
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue";
-  background: radial-gradient(1200px 800px at 20% 0%, rgba(120, 90, 255, 0.25), transparent),
-              radial-gradient(900px 600px at 90% 10%, rgba(0, 200, 255, 0.18), transparent),
-              var(--bg);
   color: var(--text);
+  position: relative;
+  overflow-x: hidden;
+  background: radial-gradient(circle at 20% 20%, #111827 0%, #050816 60%, #02040a 100%);
 }
 
 .container {
@@ -73,12 +76,23 @@ body {
 
 .product-card {
   display: grid;
-  grid-template-columns: 1fr;
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--surface);
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: var(--shadow);
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 255, 0.1),
+    0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow:
+    0 0 15px rgba(0, 255, 255, 0.3),
+    0 0 40px rgba(255, 0, 200, 0.2);
+  transform: translateY(-4px);
 }
 
 .media {
@@ -221,4 +235,66 @@ body {
   border-color: rgba(80, 255, 160, 0.6);
   box-shadow: 0 0 0 2px rgba(80, 255, 160, 0.25);
   transform: translateY(-2px);
+}
+
+
+/* PART 2 — Search UI */
+.search-wrapper {
+  max-width: 420px;
+  margin: 0 auto 24px;
+  margin-top: 24px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  outline: none;
+}
+
+#searchInput::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+#searchInput:focus {
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.08);
+}
+
+/* PART 2 — Added state */
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.product-card.added {
+  border-color: rgba(80, 255, 160, 0.9);
+  box-shadow: var(--shadow), 0 0 0 3px rgba(80, 255, 160, 0.35);
+  transform: translateY(-2px);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -200px;
+  z-index: -1;
+  background:
+    radial-gradient(500px at 15% 10%, rgba(0, 255, 255, 0.25), transparent),
+    radial-gradient(600px at 85% 20%, rgba(255, 0, 200, 0.25), transparent),
+    radial-gradient(500px at 50% 90%, rgba(0, 150, 255, 0.25), transparent);
+  filter: blur(100px);
+  animation: cyberMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes cyberMove {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-40px); }
 }

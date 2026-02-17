@@ -14,7 +14,6 @@
     <div class="container header-inner">
       <h1 class="brand">Acadia Store</h1>
 
-      <!-- pequeno feedback do JS -->
       <div class="cart" aria-live="polite">
         Cart: <span id="cartCount">0</span>
       </div>
@@ -22,9 +21,21 @@
   </header>
 
   <main class="container">
-    <p class="subtitle">
-      Responsive, mobile-first product cards with DOM interactions.
-    </p>
+
+    <div class="search-wrapper">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            aria-label="Search products"
+        />
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-primary" id="addSampleProduct" type="button">
+          Add Sample Product
+        </button>
+    </div>
 
     <section class="product-grid" aria-label="Product grid">
       <!-- Card 1 -->
